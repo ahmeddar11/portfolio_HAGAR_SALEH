@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hagar Saleh — Software Tester</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;1,300&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6f4;--card:#fff;--soft:#f5e9e8;--ink:#3b1f33;--mid:#6b4b60;--rose:#b76e79;--plum:#5a2a4a;--line:rgba(90,42,74,.14);--hero1:#f3dfe0;--hero2:#fbf6f4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1019;--card:#2a1824;--soft:#33202d;--ink:#f6e9ec;--mid:#c9aab8;--rose:#e0a0aa;--plum:#e8c3cf;--line:rgba(232,195,207,.16);--hero1:#3a1d32;--hero2:#1d1019}}
+:root[data-theme="dark"]{--bg:#1d1019;--card:#2a1824;--soft:#33202d;--ink:#f6e9ec;--mid:#c9aab8;--rose:#e0a0aa;--plum:#e8c3cf;--line:rgba(232,195,207,.16);--hero1:#3a1d32;--hero2:#1d1019}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.7 'Nunito Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15}
+.wrap{max-width:1000px;margin:0 auto;padding:0 1.5rem}
+.hero{background:linear-gradient(160deg,var(--hero1),var(--hero2));padding:6rem 0 4.5rem;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(2.8rem,7vw,5rem);font-weight:300;letter-spacing:-.01em;animation:rise .9s ease both}
+.hero h1 em{color:var(--rose)}
+.role{margin:.8rem 0 1.2rem;font-size:1.15rem;color:var(--plum);font-weight:600}
+.hero p{color:var(--mid);max-width:34rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
+.btn{padding:.75rem 1.5rem;border-radius:100px;text-decoration:none;font-weight:600;font-size:.92rem;border:1px solid var(--plum);color:var(--plum);transition:.25s}
+.btn.p{background:var(--plum);color:var(--bg)}
+.btn:hover{background:var(--rose);border-color:var(--rose);color:#fff}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.stats{display:grid;gap:1rem}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:1.2rem 1.5rem;display:flex;align-items:baseline;gap:1rem}
+.stat b{font:500 2.4rem 'Fraunces',serif;color:var(--rose)}
+.stat span{color:var(--mid);font-size:.92rem}
+section{padding:4.5rem 0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:.4rem}
+.lead{color:var(--mid);margin-bottom:2rem;max-width:36rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:100px;padding:.45rem 1rem;font-size:.88rem;color:var(--plum)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.two h3{font-size:1.25rem;margin-bottom:1rem;color:var(--plum)}
+ul{list-style:none;padding:0}
+li{padding:.4rem 0 .4rem 1.4rem;position:relative;color:var(--mid)}
+li::before{content:"";position:absolute;left:0;top:.95em;width:7px;height:7px;border-radius:50%;background:var(--rose)}
+.job{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--rose);border-radius:16px;padding:2rem}
+.job header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.job h3{font-size:1.5rem}.job .co{color:var(--rose);font-weight:600}
+.date{background:var(--soft);padding:.3rem .9rem;border-radius:100px;font-size:.85rem;color:var(--plum);align-self:flex-start}
+.job ul{columns:2;column-gap:2rem}
+.alt{background:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.5rem}
+.proj h3{font-size:1.2rem;color:var(--plum)}
+.proj .t{color:var(--rose);font-size:.85rem;font-weight:600;margin:.2rem 0 .6rem}
+.proj li{font-size:.9rem;padding:.25rem 0 .25rem 1.2rem}.proj li::before{top:.85em;width:5px;height:5px}
+.edu{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:2rem}
+.contact{text-align:center}
+.contact .chips{justify-content:center;margin-top:1.5rem}
+.contact a.chip{text-decoration:none;font-size:1rem;padding:.7rem 1.4rem}
+footer{text-align:center;padding:2rem;color:var(--mid);font-size:.85rem;border-top:1px solid var(--line)}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media(max-width:760px){.hero .wrap,.two{grid-template-columns:1fr}.job ul{columns:1}.hero{padding-top:4rem}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+ <div>
+  <h1>Hagar <em>Saleh</em></h1>
+  <div class="role">Software Tester · Web &amp; Mobile</div>
+  <p>Three years of hands-on manual testing across web and mobile products. I turn requirements into clear test cases, catch defects before release, and help Agile teams ship stable software with confidence.</p>
+  <div class="btns"><a class="btn p" href="mailto:hagarelsewy730@gmail.com">Get in touch</a><a class="btn" href="#projects">See my projects</a></div>
+ </div>
+ <div class="stats">
+  <div class="stat"><b>3+</b><span>years in manual testing</span></div>
+  <div class="stat"><b>8</b><span>products tested end to end</span></div>
+  <div class="stat"><b>Agile</b><span>Scrum sprints, every release</span></div>
+ </div>
+</div></header>
+
+<section id="skills"><div class="wrap">
+ <h2>Skills</h2><p class="lead">The testing toolkit I use every sprint.</p>
+ <div class="two">
+  <div><h3>Testing types</h3><div class="chips">
+   <span class="chip">Functional</span><span class="chip">Regression</span><span class="chip">Smoke &amp; Sanity</span><span class="chip">Exploratory</span><span class="chip">UAT</span><span class="chip">Web &amp; Mobile</span><span class="chip">Basic API</span><span class="chip">Basic Performance</span></div></div>
+  <div><h3>Tools &amp; methods</h3><div class="chips">
+   <span class="chip">Agile / Scrum</span><span class="chip">Jira</span><span class="chip">Trello</span><span class="chip">ClickUp</span><span class="chip">Postman</span><span class="chip">Chrome DevTools</span><span class="chip">Test plans &amp; cases</span></div></div>
+ </div>
+</div></section>
+
+<section id="experience" class="alt"><div class="wrap">
+ <h2>Experience</h2><p class="lead">Quality work inside a product team.</p>
+ <article class="job">
+  <header><div><h3>Software Tester</h3><div class="co">Algorithm Company</div></div><span class="date">2023 – Present</span></header>
+  <ul>
+   <li>Analyze business and technical requirements to write test scenarios and test cases</li>
+   <li>Run manual test cycles for web and mobile applications</li>
+   <li>Run regression and smoke tests before every release</li>
+   <li>Report and track defects with clear steps to reproduce and severity levels</li>
+   <li>Work with developers, product owners, and designers in Agile sprints</li>
+   <li>Join sprint planning, daily standups, and retrospectives</li>
+   <li>Validate bug fixes and confirm stability before deployment</li>
+  </ul>
+ </article>
+</div></section>
+
+<section id="projects"><div class="wrap">
+ <h2>Projects</h2><p class="lead">Products I have tested, from fitness and finance to health and SaaS.</p>
+ <div class="grid">
+  <div class="proj"><h3>Fit Life</h3><div class="t">Fitness &amp; lifestyle app</div><ul><li>Tested user flows, subscriptions, and mobile responsiveness</li><li>Ran full regression cycles before releases</li></ul></div>
+  <div class="proj"><h3>Dalilak Alakary</h3><div class="t">Real estate platform</div><ul><li>Tested listings, search filters, and user dashboards</li><li>Verified integrations and form validation</li></ul></div>
+  <div class="proj"><h3>Tharwa</h3><div class="t">Financial / investment platform</div><ul><li>Functional and regression testing of financial workflows</li><li>Validated calculations and reporting</li></ul></div>
+  <div class="proj"><h3>Marine Service</h3><div class="t">Service management system</div><ul><li>Tested booking, service requests, and admin dashboards</li><li>Took part in end-to-end test cycles</li></ul></div>
+  <div class="proj"><h3>Semat</h3><div class="t">Face-reading mobile app</div><ul><li>Tested onboarding, photo upload, and analysis results</li><li>Verified subscriptions, payments, and device responsiveness</li><li>Functional, regression, and exploratory testing</li></ul></div>
+  <div class="proj"><h3>Nex Tax</h3><div class="t">Tax management website</div><ul><li>Tested tax calculation logic, forms, and submissions</li><li>Functional, regression, and UAT testing for accuracy</li><li>Checked integrations and cross-browser compatibility</li></ul></div>
+  <div class="proj"><h3>Etmaeen</h3><div class="t">Mental health &amp; therapy app</div><ul><li>Tested registration, therapist booking, and scheduling</li><li>Verified reminders, notifications, and payments</li><li>Functional, regression, and exploratory testing</li></ul></div>
+  <div class="proj"><h3>Subscription Platform</h3><div class="t">SaaS billing platform</div><ul><li>Tested plans, billing cycles, and renewal flows</li><li>Verified account management and admin dashboard</li><li>Functional, regression, and UAT testing for billing accuracy</li></ul></div>
+ </div>
+</div></section>
+
+<section class="alt"><div class="wrap two">
+ <div><h2>Training</h2><ul><li>Agile Testing</li><li>Manual Testing</li><li>Basic API Testing</li><li>Mobile Applications Testing</li><li>Performance Testing Fundamentals</li></ul></div>
+ <div><h2>Strengths</h2><div class="chips" style="margin-top:1rem"><span class="chip">Analytical thinking</span><span class="chip">Attention to detail</span><span class="chip">Communication &amp; teamwork</span><span class="chip">Time management</span><span class="chip">Problem solving</span></div></div>
+</div></section>
+
+<section id="education"><div class="wrap">
+ <h2>Education</h2><p class="lead">&nbsp;</p>
+ <div class="edu"><h3>Bachelor's in Management &amp; Accounting</h3>
+  <p style="color:var(--rose);font-weight:600;margin:.3rem 0">Egyptian Institute of Alexandria Academy for Management and Accounting · 2020 – 2024</p>
+  <ul><li>GPA: 80%</li><li>Graduation project: "Dar Gold", an e-commerce website for selling gold. Grade: Excellent</li></ul>
+  <p style="margin-top:1rem;color:var(--mid)">Languages: Arabic (native), English (good)</p></div>
+</div></section>
+
+<section id="contact" class="contact alt"><div class="wrap">
+ <h2>Let's work together</h2><p class="lead" style="margin-inline:auto">Open to software testing roles, remote or in Alexandria.</p>
+ <div class="chips"><a class="chip" href="mailto:hagarelsewy730@gmail.com">hagarelsewy730@gmail.com</a><a class="chip" href="tel:01096807512">01096807512</a></div>
+</div></section>
+<footer>Hagar Saleh · Software Tester · Alexandria, Egypt</footer>
+</body>
+</html>
